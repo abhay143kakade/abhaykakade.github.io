@@ -24,3 +24,4 @@ This is a simple, responsive portfolio website ready to deploy on **GitHub Pages
 ## Notes
 - The contact form is a demo only. For real email, use Netlify Forms, Formspree, or implement a serverless function.
 
+.
