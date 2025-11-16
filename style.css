@@ -89,3 +89,43 @@ form input, form textarea{width:100%;padding:10px;margin-top:6px;margin-bottom:1
   .brand{font-size:1rem}
   .hero h1{font-size:1.6rem}
 }
+/* ---------- Smooth scrolling behaviour for browsers that support it ---------- */
+html { scroll-behavior: smooth; }
+
+/* ---------- Mobile hamburger ---------- */
+.burger{
+  display:none;
+  background:transparent;
+  border:0;
+  width:44px;height:44px;align-items:center;justify-content:center;cursor:pointer;
+}
+.burger span{display:block;width:22px;height:2px;margin:4px 0;background:var(--accent2);border-radius:2px;transition:all .25s}
+@media(max-width:900px){
+  .nav-links{position:fixed;top:0;right:0;height:100vh;width:260px;background:linear-gradient(180deg,var(--card),#041021);transform:translateX(100%);transition:transform .28s;padding:80px 18px;display:flex;flex-direction:column;gap:12px;z-index:60}
+  .burger{display:flex}
+  body.nav-open .nav-links{transform:translateX(0)}
+  .nav-links a{padding:10px;border-radius:10px}
+}
+
+/* ---------- Active nav link style ---------- */
+.nav-links a.active{background:linear-gradient(90deg,var(--accent1),var(--accent2));color:#021827;font-weight:700;box-shadow:0 8px 30px rgba(6,182,212,0.06)}
+
+/* ---------- Social icons strip ---------- */
+.social-strip{position:fixed;left:18px;bottom:20px;display:flex;flex-direction:column;gap:10px;z-index:40}
+.social-strip a{display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:10px;background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent);border:1px solid rgba(255,255,255,0.03);transition:transform .2s, box-shadow .2s}
+.social-strip a:hover{transform:translateY(-6px);box-shadow:0 10px 30px rgba(0,255,213,0.06)}
+
+/* ---------- Profile photo in hero ---------- */
+.hero-inner{display:grid;grid-template-columns:1fr;gap:18px;align-items:center}
+@media(min-width:900px){ .hero-inner{grid-template-columns:1fr 280px} }
+.profile-card{background:var(--card);padding:14px;border-radius:14px;border:1px solid rgba(255,255,255,0.03);display:flex;flex-direction:column;align-items:center;gap:10px}
+.profile-card img{width:180px;height:180px;border-radius:50%;object-fit:cover;border:4px solid rgba(0,0,0,0.2);box-shadow:0 12px 40px rgba(0,0,0,0.6)}
+
+/* ---------- small tweaks for hero CTAs on mobile ---------- */
+@media(max-width:600px){
+  .hero .hero-ctas{display:flex;flex-direction:column;gap:10px}
+}
+
+/* ---------- reveal animation class ---------- */
+.in-view{opacity:1;transform:none;transition:opacity .6s ease, transform .6s ease}
+.card, .skill-card, .project-card{opacity:0;transform:translateY(18px)}
