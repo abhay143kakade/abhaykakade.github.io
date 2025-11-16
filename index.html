@@ -3,163 +3,192 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Abhay Vijay Kakade — Portfolio</title>
-  <meta name="description" content="Portfolio of Abhay Vijay Kakade — Electronics and Telecommunication Engineering student. Embedded systems, C++, MATLAB, Python." />
+  <title>Abhay Vijay Kakade — Embedded Systems, E&TC</title>
+  <meta name="description" content="Abhay Vijay Kakade — Electronics & Telecommunication Engineering student. Projects in Embedded Systems, C++, Python, MATLAB. Resume & Contact." />
+
+  <!-- Open Graph (optional: upload assets/og-image.png) -->
+  <meta property="og:title" content="Abhay Vijay Kakade — Embedded Systems, E&TC">
+  <meta property="og:description" content="Portfolio — Embedded systems, C++, Python, MATLAB. Projects, resume & contact.">
+  <meta property="og:image" content="https://abhay143kakade.github.io/assets/og-image.png">
+  <meta property="og:url" content="https://abhay143kakakade.github.io/">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/favicon.png" sizes="32x32">
+
+  <!-- CSS -->
   <link rel="stylesheet" href="style.css">
+
+  <!-- Font Awesome CDN (icons) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/js/all.min.js" crossorigin="anonymous"></script>
+
+  <!-- JS (defer so DOM exists) -->
   <script defer src="script.js"></script>
-  <!-- Font Awesome CDN for icons -->
-  <script src="https://kit.fontawesome.com/your-kit-code.js" crossorigin="anonymous"></script>
 </head>
 <body>
   <!-- Profile flip badge (top-left) -->
-<div class="profile-badge" aria-hidden="false" role="button" tabindex="0" title="Abhay Vijay Kakade">
-  <div class="flip">
-    <img class="face front" src="assets/photo.jpg" alt="Abhay Vijay Kakade photo">
-    <div class="face back">
-      <div class="back-inner">
-        <strong>Abhay</strong>
-        <span>ETC • Embedded</span>
+  <div class="profile-badge" aria-hidden="false" role="button" tabindex="0" title="Abhay Vijay Kakade">
+    <div class="flip">
+      <img class="face front" src="assets/photo.jpg" alt="Abhay Vijay Kakade photo">
+      <div class="face back">
+        <div class="back-inner">
+          <strong>Abhay</strong>
+          <span>E&TC • Embedded</span>
+          <div style="margin-top:6px;display:flex;gap:8px;justify-content:center">
+            <a href="https://www.linkedin.com/in/abhay-kakade-08988128a/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="https://github.com/abhay143kakade" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+          </div>
+        </div>
       </div>
     </div>
   </div>
-</div>
 
-  <header class="site-header">
-  <nav class="nav">
-  <div class="brand">Abhay Vijay Kakade</div>
+  <!-- Header / Nav -->
+  <header class="site-header" role="banner">
+    <nav class="nav" role="navigation" aria-label="Main navigation">
+      <div class="brand">Abhay Vijay Kakade</div>
 
-  <!-- Mobile hamburger -->
-  <button id="burgerBtn" class="burger" aria-label="Toggle menu">
-    <span></span><span></span><span></span>
-  </button>
+      <!-- Mobile hamburger -->
+      <button id="burgerBtn" class="burger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
 
-  <div class="nav-links">
-    <a href="#about">About</a>
-    <a href="#skills">Skills</a>
-    <a href="#projects">Projects</a>
-    <a href="#experience">Experience</a>
-    <a href="#contact">Contact</a>
-    <a class="resume-btn" href="assets/Abhay_Kakade_Resume.docx" download>Download Resume</a>
-  </div>
-</nav>
-
-
+      <div class="nav-links" role="menubar">
+        <a role="menuitem" href="#about">About</a>
+        <a role="menuitem" href="#skills">Skills</a>
+        <a role="menuitem" href="#projects">Projects</a>
+        <a role="menuitem" href="#experience">Experience</a>
+        <a role="menuitem" href="#contact">Contact</a>
+        <a class="resume-btn" href="assets/Abhay_Kakade_Resume.docx" download>Download Resume</a>
+      </div>
+    </nav>
   </header>
 
   <main>
-    <section id="hero" class="hero">
+    <!-- Hero -->
+    <section id="hero" class="hero hero-section">
       <div class="hero-inner">
-        <h1>Hi, I'm <span class="name">Abhay Vijay Kakade</span></h1>
-        <h2 class="tagline">Electronics and Telecommunication Engineering</h2>
-        <p class="intro">Passionate E&amp;TC student building hardware-software projects using <strong>C++</strong>, <strong>Python</strong>, <strong>MATLAB</strong> and embedded systems.</p>
-        <p class="roles">I'm a <span id="typing"></span><span class="cursor">|</span></p>
-        <div class="hero-ctas">
-          <a href="#projects" class="btn primary">See Projects</a>
-          <a href="#contact" class="btn">Contact Me</a>
+        <div>
+          <h1>Hi, I'm <span class="name">Abhay Vijay Kakade</span></h1>
+          <h2 class="tagline">Electronics and Telecommunication Engineering</h2>
+          <p class="intro">Passionate E&amp;TC student building hardware-software projects using <strong>C++</strong>, <strong>Python</strong>, <strong>MATLAB</strong> and embedded systems.</p>
+          <p class="roles">I'm a <span id="typing"></span><span class="cursor">|</span></p>
+          <div class="hero-ctas">
+            <a href="#projects" class="btn primary">See Projects</a>
+            <a href="#contact" class="btn">Contact Me</a>
+          </div>
         </div>
+
+        <!-- profile card in hero (optional duplicate/higher-res card) -->
+        <aside class="profile-card" aria-hidden="false">
+          <img src="assets/photo.jpg" alt="Abhay Vijay Kakade — photo">
+          <h4>Abhay Vijay Kakade</h4>
+          <p class="muted">E&TC Student • Embedded Systems</p>
+          <div style="display:flex;gap:8px;margin-top:8px">
+            <a class="btn" href="#contact">Hire Me</a>
+            <a class="btn" href="assets/Abhay_Kakade_Resume.docx" download>Resume</a>
+          </div>
+        </aside>
       </div>
     </section>
 
-    <section id="about" class="section two-col">
-      <div class="card" aria-labelledby="about-heading">
+    <!-- About + Quick facts -->
+    <section id="about" class="section two-col" aria-labelledby="about-heading">
+      <div class="card">
         <h3 id="about-heading">About Me</h3>
         <p>I'm Abhay Vijay Kakade, an Electronics and Telecommunication Engineering student passionate about building real-world tech solutions using Embedded Systems, C++, Python, MATLAB, and automation tools. I enjoy working on hardware–software integrated projects, experimenting with sensors, microcontrollers, and intelligent systems.</p>
         <p>I am seeking internships and collaboration opportunities in embedded systems, automation, and AI-driven hardware projects.</p>
       </div>
+
       <div class="card">
         <h3>Quick Facts</h3>
-        <ul class="facts">
+        <ul>
           <li><strong>College:</strong> Jayawantrao Sawant College of Engineering, Pune</li>
           <li><strong>Certifications:</strong> IBM, NPTEL, MINDLUSTER, NIELIT</li>
-          <li><strong>Languages:</strong> English , Hindi, Marathi</li>
+          <li><strong>Languages:</strong> English, Hindi, Marathi</li>
           <li><strong>Contact:</strong> kakadeviju044@gmail.com • +91 9420205106</li>
         </ul>
       </div>
     </section>
 
-    <section id="skills" class="section">
-      <h3>Skills</h3>
+    <!-- Skills -->
+    <section id="skills" class="section" aria-labelledby="skills-heading" style="padding:40px 20px;">
+      <h3 id="skills-heading">Skills</h3>
       <div class="skill-grid">
-        <div class="skill-card">
-          <h4>C++</h4>
-          <p>Object-oriented programming, algorithms, microcontroller interfacing</p>
-        </div>
-        <div class="skill-card">
-          <h4>Python</h4>
-          <p>Scripting, automation, basic ML experiments</p>
-        </div>
-        <div class="skill-card">
-          <h4>MATLAB</h4>
-          <p>Simulations, signal processing and analysis</p>
-        </div>
-        <div class="skill-card">
-          <h4>Embedded</h4>
-          <p>Arduino, sensors, motor drivers, real-time debugging</p>
-        </div>
-        <div class="skill-card">
-          <h4>Excel</h4>
-          <p>Data analysis and documentation</p>
-        </div>
+        <div class="skill-card"> <strong>C++</strong><div>Object-oriented programming, algorithms, microcontroller interfacing</div></div>
+        <div class="skill-card"> <strong>Python</strong><div>Scripting, automation, basic ML experiments</div></div>
+        <div class="skill-card"> <strong>MATLAB</strong><div>Simulations, signal processing and analysis</div></div>
+        <div class="skill-card"> <strong>Embedded</strong><div>Arduino, sensors, motor drivers, real-time debugging</div></div>
+        <div class="skill-card"> <strong>Excel</strong><div>Data analysis and documentation</div></div>
       </div>
     </section>
 
-    <section id="projects" class="section">
+    <!-- Projects -->
+    <section id="projects" class="section" style="padding:40px 20px;">
       <h3>Projects</h3>
       <div class="projects-grid">
         <article class="project-card">
           <h4>Fire-Fighting Robot</h4>
-          <p>Autonomous robot that detects and extinguishes small fires using flame sensors, motor drivers and microcontroller control logic. Built sensors, electronics and control algorithms to navigate and act.</p>
-          <p class="tags">Embedded • Sensors • C++</p>
+          <p>Autonomous robot that detects and extinguishes small fires using flame sensors, motor drivers and microcontroller logic.</p>
+          <p><small>Embedded • Sensors • C++</small></p>
         </article>
 
-        <article class="project-card placeholder">
-          <h4>Project Title Here</h4>
-          <p>Short description. Add your project details in the projects array inside script.js to show more.</p>
-          <p class="tags">Add tags</p>
+        <article class="project-card">
+          <h4>Library Management System (Demo)</h4>
+          <p>Simple system for managing book checkouts and returns using C++ console application.</p>
+          <p><small>C++ • File Handling</small></p>
         </article>
       </div>
     </section>
 
-    <section id="experience" class="section">
+    <!-- Experience -->
+    <section id="experience" class="section" style="padding:40px 20px;">
       <h3>Internship Experience</h3>
       <div class="card">
-        <p>Hands-on experience with embedded systems, sensor testing, microcontroller programming and documentation. Assisted in testing automation circuits, debugging hardware issues and preparing technical reports. Gained exposure to real-world engineering workflows and improved practical problem-solving skills.</p>
-      </div>
-      <h4>Certifications</h4>
-      <ul class="certs">
-        <li>IBM: Artificial Intelligence Fundamentals</li>
-        <li>NPTEL: Enhancing Soft Skills and Technical English</li>
-        <li>NIELIT: Machine Learning using Python, VLSI for Beginners</li>
-      </ul>
-    </section>
-
-    <section id="contact" class="section two-col">
-      <div class="card">
-        <h3>Contact</h3>
-        <p>Email: <a href="mailto:kakadeviju044@gmail.com">kakadeviju044@gmail.com</a></p>
-        <p>Phone: +91 9420205106</p>
-        <p>LinkedIn: <a href="https://www.linkedin.com/in/abhay-kakade-08988128a/" target="_blank">Abhay Kakade</a></p>
-        <p>GitHub: <a href="https://github.com/" target="_blank">github.com/your-username</a></p>
-      </div>
-      <div class="card">
-        <h3>Send a message</h3>
-        <form id="contactForm">
-          <label for="name">Name</label>
-          <input id="name" name="name" required>
-          <label for="email">Email</label>
-          <input id="email" name="email" type="email" required>
-          <label for="message">Message</label>
-          <textarea id="message" name="message" rows="4" required></textarea>
-          <button type="submit" class="btn primary">Send</button>
-        </form>
-        <p class="note">This form uses client-side demo only. Configure Netlify/Forms or Formspree for live emails.</p>
+        <p><strong>Intern (example)</strong> — Describe your internship: tasks, technologies, outcomes. Replace with real text.</p>
       </div>
     </section>
 
+    <!-- Contact -->
+    <section id="contact" class="section" style="padding:40px 20px;">
+      <h3>Contact</h3>
+
+      <!-- Netlify-ready contact form (or Formspree) -->
+      <form id="contactForm" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="card" style="max-width:720px;">
+        <input type="hidden" name="form-name" value="contact">
+        <p style="display:none"><label>Don't fill this: <input name="bot-field"></label></p>
+
+        <label for="name">Name</label>
+        <input id="name" name="name" required>
+
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" required>
+
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+
+        <button type="submit" class="btn primary">Send</button>
+      </form>
+    </section>
   </main>
 
+  <!-- Social icons (bottom-left) -->
+  <div class="social-strip" aria-hidden="false">
+    <a href="https://www.linkedin.com/in/abhay-kakade-08988128a/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+      <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
+    </a>
+    <a href="https://github.com/abhay143kakakade" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+      <i class="fa-brands fa-github" aria-hidden="true"></i>
+    </a>
+  </div>
+
   <footer class="site-footer">
-    <p>© 2025 Abhay Vijay Kakade — Built with ❤️ • <a href="#top">Back to top</a></p>
+    <small>© <span id="year"></span> Abhay Vijay Kakade — Built with HTML, CSS & JS</small>
   </footer>
+
+  <script>
+    // small inline helpers (keeps year dynamic)
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
