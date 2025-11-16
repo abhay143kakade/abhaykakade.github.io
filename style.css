@@ -137,7 +137,7 @@ form input, form textarea{width:100%;padding:10px;margin-top:6px;margin-bottom:1
 /* back card */
 .profile-badge .face.back{
   transform:rotateY(180deg);
-  background:linear-gradient(135deg,var(--accent1),var(--accent2));
+  background: transparent; /* Fully transparent */
   color:#021827;
   display:flex;
   align-items:center;
