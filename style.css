@@ -168,3 +168,75 @@ form input, form textarea{width:100%;padding:10px;margin-top:6px;margin-bottom:1
   .profile-badge .back-inner strong{font-size:0.9rem}
   .profile-badge .back-inner span{font-size:0.7rem}
 }
+/* ---------- HERO PROFILE CARD SIZE FIX (override existing styles) ---------- */
+
+.profile-card{
+  background: var(--card);
+  padding: 12px 16px !important;
+  border-radius: 12px !important;
+  border: 1px solid rgba(255,255,255,0.04) !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  gap: 8px !important;
+  max-width: 220px !important;
+  margin: 18px auto 0 !important;
+  box-shadow: 0 8px 28px rgba(0,0,0,0.45) !important;
+}
+
+.profile-card img{
+  width: 110px !important;
+  height: 110px !important;
+  border-radius: 50% !important;
+  object-fit: cover !important;
+  border: 3px solid rgba(0,0,0,0.18) !important;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.45) !important;
+  display: block !important;
+}
+
+.profile-card h4{
+  margin: 8px 0 4px !important;
+  font-size: 1rem !important;
+}
+
+.profile-card .muted{
+  color: var(--muted) !important;
+  font-size: 0.9rem !important;
+  margin: 0 !important;
+}
+
+/* Make hero two-column on big screens */
+@media(min-width:900px){
+  .hero-inner{
+    display: grid !important;
+    grid-template-columns: 1fr 240px !important;
+    gap: 28px !important;
+    align-items: center !important;
+  }
+  .profile-card{ margin: 0 !important; }
+}
+
+/* Medium screens */
+@media(min-width:700px) and (max-width:899px){
+  .hero-inner{
+    display: grid !important;
+    grid-template-columns: 1fr 220px !important;
+    gap:20px !important;
+    align-items:center !important;
+  }
+  .profile-card{ max-width:200px !important; }
+  .profile-card img{ width:100px !important; height:100px !important; }
+}
+
+/* Mobile */
+@media(max-width:600px){
+  .profile-card{
+    width:160px !important;
+    padding:10px !important;
+    margin-top:12px !important;
+  }
+  .profile-card img{
+    width:86px !important;
+    height:86px !important;
+  }
+}
