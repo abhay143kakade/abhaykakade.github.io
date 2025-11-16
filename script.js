@@ -84,4 +84,25 @@ document.addEventListener('DOMContentLoaded', ()=>{
   const burger = document.getElementById('burgerBtn');
   burger?.addEventListener('click', ()=> document.body.classList.toggle('nav-open'));
 });
+// mobile tap toggle for profile flip badge
+(function(){
+  const badge = document.querySelector('.profile-badge');
+  if(!badge) return;
 
+  // toggle on click/tap
+  badge.addEventListener('click', (e)=>{
+    // ignore if user clicked a link inside (none here)
+    badge.classList.toggle('flipped');
+  });
+
+  // also allow keyboard toggle (Enter/Space)
+  badge.addEventListener('keydown', (e)=>{
+    if(e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault();
+      badge.classList.toggle('flipped');
+    }
+  });
+
+  // optionally remove 'flipped' after 3s on mobile (uncomment if you want auto-revert)
+  // badge.addEventListener('click', ()=> setTimeout(()=> badge.classList.remove('flipped'), 3000));
+})();
