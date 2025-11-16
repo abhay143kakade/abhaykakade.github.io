@@ -89,3 +89,82 @@ form input, form textarea{width:100%;padding:10px;margin-top:6px;margin-bottom:1
   .brand{font-size:1rem}
   .hero h1{font-size:1.6rem}
 }
+/* Profile flip badge (top-left) */
+.profile-badge{
+  position:fixed;
+  left:18px;
+  top:18px;
+  width:86px;
+  height:86px;
+  z-index:80;
+  perspective:1000px; /* enables 3D */
+  border-radius:14px;
+  box-shadow:0 10px 30px rgba(0,0,0,0.6);
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* inner flip container */
+.profile-badge .flip{
+  width:100%;
+  height:100%;
+  position:relative;
+  transform-style:preserve-3d;
+  transition: transform 0.75s cubic-bezier(.2,.9,.3,1);
+  border-radius:inherit;
+}
+
+/* faces */
+.profile-badge .face{
+  position:absolute;
+  inset:0;
+  backface-visibility:hidden;
+  -webkit-backface-visibility:hidden;
+  border-radius:inherit;
+  overflow:hidden;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+/* front image */
+.profile-badge .face.front img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
+}
+
+/* back card */
+.profile-badge .face.back{
+  transform:rotateY(180deg);
+  background:linear-gradient(135deg,var(--accent1),var(--accent2));
+  color:#021827;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-weight:700;
+  text-align:center;
+}
+
+/* text inside back */
+.profile-badge .back-inner{display:flex;flex-direction:column;gap:4px;padding:8px;color:#001827}
+.profile-badge .back-inner strong{font-size:1rem}
+.profile-badge .back-inner span{font-size:0.8rem;opacity:0.95}
+
+/* hover flip for desktop */
+@media (hover: hover) and (pointer: fine){
+  .profile-badge:hover .flip,
+  .profile-badge:focus-within .flip{
+    transform: rotateY(180deg);
+  }
+}
+
+/* mobile: toggle via .flipped class (JS will add it) */
+.profile-badge.flipped .flip { transform: rotateY(180deg); }
+
+/* small screens reduce size */
+@media(max-width:600px){
+  .profile-badge{width:68px;height:68px;left:12px;top:12px}
+  .profile-badge .back-inner strong{font-size:0.9rem}
+  .profile-badge .back-inner span{font-size:0.7rem}
+}
